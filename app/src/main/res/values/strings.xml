@@ -2,4 +2,5 @@
     <string name="app_name">Resume Buddy</string>
     <string name="facebook_app_id">2488867101377059</string>
     <string name="fb_login_protocol_scheme">fb2488867101377059</string>
+    <string name="app_quote">Build your best resume now.</string>
 </resources>
