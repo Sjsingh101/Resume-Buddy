@@ -16,9 +16,11 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_chats"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="10dp"
-        android:layout_below="@id/profile_activity_toolbar" />
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/profile_activity_toolbar"
+        android:layout_above="@id/send_message_layout"/>
 
     <LinearLayout
         android:id="@+id/send_message_layout"
@@ -26,27 +28,41 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:background="@color/white">
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="3dp"
+            android:layout_marginLeft="30dp"
+            android:background="@color/black">
 
         <EditText
             android:id="@+id/send_message_text"
-            android:layout_width="300dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/profile_send_message_hint"
-            android:text="@string/profile_send_message_text"
+            android:textSize="14sp"
             android:textColor="@color/black"
             android:outlineProvider="background"
             android:background="@color/white"
-            android:minWidth="200dp"
-            android:inputType="textMultiLine"/>
+            android:padding="5dp"
+            android:width="250dp"
+            android:maxWidth="300dp"
+            android:inputType="textMultiLine" />
+        </androidx.cardview.widget.CardView>
 
-        <ImageView
-            android:id="@+id/send_message_btn"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/ic_profile_send_btn"
-            android:layout_marginLeft="30dp"
-            android:onClick="sendMessage"/>
+
+            <ImageView
+                android:id="@+id/send_message_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="sendMessage"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_profile_send_btn" />
 
     </LinearLayout>
 

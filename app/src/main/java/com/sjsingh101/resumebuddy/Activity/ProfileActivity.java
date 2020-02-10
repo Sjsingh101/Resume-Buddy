@@ -2,10 +2,15 @@ package com.sjsingh101.resumebuddy.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -55,7 +60,6 @@ public class ProfileActivity extends AppCompatActivity implements GoogleApiClien
         chatRecyclerView = findViewById(R.id.rv_chats);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         chatRecyclerView.setLayoutManager(linearLayoutManager);
-        chatRecyclerView.setHasFixedSize(true);
         mChatAdapter = new ChatAdapter(getApplicationContext());
         chatRecyclerView.setAdapter(mChatAdapter);
 
@@ -77,7 +81,6 @@ public class ProfileActivity extends AppCompatActivity implements GoogleApiClien
         getSupportActionBar().setTitle(R.string.app_name);
 
         sendMessage=findViewById(R.id.send_message_text);
-
     }
 
     @Override
@@ -142,12 +145,21 @@ public class ProfileActivity extends AppCompatActivity implements GoogleApiClien
         ChatDataType userMessage=new ChatDataType("You",message);
         chatDataViewModel.insert(userMessage);
 
-        botReply(); // method for generating  further queries
+        sendMessage.setText("");
+
+        botReply(); // method for generating  further bot queries
 
 
     }
 
     private void botReply() {
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // Do something after 5s = 5000ms
+            }
+        }, 500000);
 
         ChatDataType botQuery=new ChatDataType("Bot","OK What's your name");
         chatDataViewModel.insert(botQuery);

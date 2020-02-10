@@ -12,3 +12,5 @@
 /captures
 .externalNativeBuild
 .cxx
+credentials.json
+google-services.json
