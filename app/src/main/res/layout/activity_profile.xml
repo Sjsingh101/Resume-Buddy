@@ -1,49 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/profile_background">
 
-    <ImageView
-        android:id="@+id/profile_image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/ic_launcher_background"/>
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/profile_activity_toolbar"
         android:layout_height="wrap_content"
-        android:layout_below="@id/profile_image"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Your Name:"/>
+        android:layout_width="match_parent"
+        android:background="@color/blue"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-    <TextView
-        android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/name"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Your Email id:"/>
-
-    <TextView
-        android:id="@+id/id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/email"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Your id:"/>
-
-    <Button
-        android:id="@+id/sign_out_btn"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_chats"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/id"
-        android:layout_marginTop="20dp"
-        android:text="Sign Out"/>
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/profile_activity_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/send_message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/send_message_text"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/profile_send_message_hint"
+            android:text="@string/profile_send_message_text"
+            android:textColor="@color/black"
+            android:outlineProvider="background"
+            android:background="@color/white"
+            android:minWidth="200dp"
+            android:inputType="textMultiLine"/>
+
+        <ImageView
+            android:id="@+id/send_message_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_profile_send_btn"
+            android:layout_marginLeft="30dp"
+            android:onClick="sendMessage"/>
+
+    </LinearLayout>
 
 
 

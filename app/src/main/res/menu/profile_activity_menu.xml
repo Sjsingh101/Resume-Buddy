@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/profile_activity_toolbar_logOut"
+        android:title="@string/profile_menu_logout_txt" />
+
+    <item
+        android:id="@+id/profile_activity_toolbar_clearAll"
+        android:title="Clear All Messages"/>
+
+</menu>

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/main_activity_bg"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
 
 
         <RelativeLayout
@@ -70,4 +70,50 @@
                     android:textAllCaps="false"
                     android:textColor="@color/black" />
         </RelativeLayout>
-</RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/register_user_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/google_login"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerInParent="true"
+            android:background="@color/white">
+                
+                <ImageView
+                    android:id="@+id/register_user_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_new_account"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"/>
+                
+                <TextView
+                    android:id="@+id/register_user_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@id/register_user_img"
+                    android:text="Create a new account"
+                    android:textColor="@color/black"
+                    android:gravity="center|fill_horizontal"
+                    android:layout_marginLeft="30dp"/>
+        </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/sign_in_user_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/register_user_email"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+                    android:text="Already a member? Log in"
+                    android:gravity="center"
+                    android:onClick="logInWithEmail"/>
+
+
+
+
+        </RelativeLayout>

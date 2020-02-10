@@ -1,5 +1,30 @@
 <resources>
     <string name="app_name">Resume Buddy</string>
+
+               <!--For Facebook Login-->
     <string name="facebook_app_id">2488867101377059</string>
     <string name="fb_login_protocol_scheme">fb2488867101377059</string>
+
+               <!--Register User Activity -->
+    <string name="reg_create_account_txt">CREATE ACCOUNT</string>
+    <string name="reg_pass_hint">enter password</string>
+    <string name="reg_mail_hint">enter email</string>
+    <string name="reg_display_name_hint">enter display name</string>
+    <string name="reg_heading_txt">Create a new Account</string>
+
+               <!--Profile Activity Menu -->
+    <string name="profile_menu_logout_txt">Log Out</string>
+    <string name="activity_login_btn_text">LOGIN</string>
+    <string name="activity_login_heading_text">Login to your Account</string>
+
+               <!--Login User Activity-->
+    <string name="reg_ProgressDialog_message">Please Wait while your account is created</string>
+    <string name="reg_ProgressDialog_title">Registering User</string>
+    <string name="reg_Login_failed_message">Please Enter Valid Credentials!</string>
+
+               <!-- Profile Activity-->
+    <string name="profile_send_message_hint">Enter Your Message</string>
+    <string name="profile_send_message_text">HI there I love you!</string>
+
+
 </resources>

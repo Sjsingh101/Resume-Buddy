@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "992686845086",
+    "firebase_url": "https://resume-buddy.firebaseio.com",
+    "project_id": "resume-buddy",
+    "storage_bucket": "resume-buddy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992686845086:android:4717f8d1cf1265ea301f8f",
+        "android_client_info": {
+          "package_name": "com.sjsingh101.resumebuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "992686845086-69gv0vqjkqhogoil5bosetnhq3orfntj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sjsingh101.resumebuddy",
+            "certificate_hash": "d8152b1a2fd11e45d2ded8f5aa1503304a0adf60"
+          }
+        },
+        {
+          "client_id": "992686845086-favfs1t2rhl0qp6hap3vj77898khc4lp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGzmFVqRx8mc9tcI0ynDbN7sBtPDGcGbQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "992686845086-favfs1t2rhl0qp6hap3vj77898khc4lp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
